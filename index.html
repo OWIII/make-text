@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="description--content">
+  <meta name="keywords" http-equiv="keywords" content="html5, css, owiii">
+  <title>MakeText</title>
+  <!--[if lt IE 9]>
+  <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="block-counter">
+      <span>Всего символов: {{ countOfsymbols }}</span>
+      <span>Без пробелов: {{ countOfSymbolsWithoutSpace }}</span>
+      <span>Количество слов: {{ countOfWords }}</span>
+    </div>
+    <div class="block-text">
+      <textarea class="textaria" placeholder="Введите текст" v-model="inputText"></textarea>
+    </div>
+    <div class="block-buttons">
+      <button type="button" class="btn btn-success" @click.prevent = "CopyText">Скопировать</button>
+      <button type="button" class="btn btn-danger" @click.prevent = "DeleteText">Удалить весь текст</button>
+    </div>
+  </div>
+  <script src="http://unpkg.com/vue/dist/vue.js"></script>
+  <script src="http://unpkg.com/portal-vue"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
